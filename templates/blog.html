@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Build a blog</h1>
+
+
+        <ul>
+            {% for title in completed_title %}
+            <li><h2>
+            
+            <a href="./blog-post">{{title.title}}</a>
+            
+            
+            </h2> 
+            {{title.blog}}
+            </li> 
+
+            {% endfor %}
+        </ul>
+
+{% endblock %}
