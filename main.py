@@ -41,8 +41,9 @@ def postblog():
 
 @app.route('/blog-post', methods=['POST', 'GET']) 
 def redirectblog(): 
-    #need to find a way to request the title and post data, so that I can format it into blog-post.html
-    return render_template('blog-post.html' )
+    title = request.form['title']
+    post = request.form['post']
+    return render_template('blog-post.html', title = title, post = post)
 
 
 if __name__ == '__main__':

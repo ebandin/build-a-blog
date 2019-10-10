@@ -8,8 +8,11 @@
             {% for title in completed_title %}
             <li><h2>
             
-            <a href="./blog-post">{{title.title}}</a>
-            
+            <form method="POST" action="/blog-post" style="display:inline-block;">
+            <input type="hidden" name="title" value="{{title.title}}" />
+            <input type="hidden" name="post" value="{{title.blog}}" />
+            <input type="image" value="{{title.title}}!" />
+            </form> 
             
             </h2> 
             {{title.blog}}
